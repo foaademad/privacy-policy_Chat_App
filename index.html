@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>ChatApp - Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Icons (Font Awesome) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    :root {
+      --bg-main: #050509;
+      --bg-elevated: #111119;
+      --bg-soft: #171722;
+      --bg-chip: #1f1f2d;
+      --border-color: rgba(255, 255, 255, 0.06);
+      --accent-gold: #f5c15c;
+      --accent-silver: #d0d4dd;
+      --text-main: #f7f7f8;
+      --text-muted: #a2a7b3;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.75);
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --radius-pill: 999px;
+      --max-width: 900px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, #141421 0, #050509 55%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 20px 14px 40px;
+    }
+
+    .app-shell {
+      width: 100%;
+      max-width: var(--max-width);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.8));
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      backdrop-filter: blur(26px);
+      display: flex;
+      flex-direction: column;
+      max-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border-color);
+      background: linear-gradient(
+        135deg,
+        rgba(245, 193, 92, 0.12),
+        rgba(255, 255, 255, 0.01)
+      );
+    }
+
+    .header-left,
+    .header-right {
+      width: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .header-right {
+      justify-content: flex-end;
+    }
+
+    .back-button {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-silver);
+      cursor: pointer;
+      background: radial-gradient(circle at 0 0, rgba(245, 193, 92, 0.4), rgba(8, 8, 15, 0.9));
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
+    }
+
+    .back-button:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent-gold);
+      box-shadow: 0 12px 26px rgba(245, 193, 92, 0.35);
+      background: radial-gradient(circle at 0 0, rgba(245, 193, 92, 0.7), rgba(8, 8, 15, 0.95));
+    }
+
+    .header-center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .header-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .header-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 10px;
+      background: radial-gradient(circle at 0 0, rgba(245, 193, 92, 0.9), rgba(0, 0, 0, 0.9));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #050509;
+      box-shadow: 0 0 0 1px rgba(250, 215, 130, 0.6), 0 10px 20px rgba(0, 0, 0, 0.8);
+      font-size: 12px;
+    }
+
+    .header-title {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .header-subtitle {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* Content */
+    .content-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 20px 26px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(245, 193, 92, 0.7) rgba(17, 17, 25, 0.7);
+      background:
+        radial-gradient(circle at top, rgba(245, 193, 92, 0.07) 0, transparent 50%),
+        radial-gradient(circle at bottom, rgba(192, 192, 192, 0.12) 0, transparent 55%);
+    }
+
+    .content-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .content-scroll::-webkit-scrollbar-track {
+      background: rgba(8, 8, 15, 0.9);
+      border-radius: 999px;
+    }
+
+    .content-scroll::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, var(--accent-gold), #b19b4a);
+      border-radius: 999px;
+    }
+
+    .content-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* Last updated badge */
+    .last-updated-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(245, 193, 92, 0.7);
+      background: radial-gradient(circle at 0 0, rgba(245, 193, 92, 0.18), rgba(8, 8, 15, 0.95));
+      color: var(--accent-gold);
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0.95;
+      gap: 7px;
+      margin: 0 auto 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .last-updated-badge::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0.4), transparent 40%, transparent 60%, rgba(255, 255, 255, 0.25));
+      mix-blend-mode: soft-light;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    /* Intro card */
+    .intro-card {
+      padding: 20px 20px 18px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.82)),
+        radial-gradient(circle at 0 0, rgba(245, 193, 92, 0.16), transparent 60%);
+      margin-bottom: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85);
+    }
+
+    .intro-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 12px;
+    }
+
+    .intro-header-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 14px;
+      border: 1px solid rgba(245, 193, 92, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 0 0, rgba(245, 193, 92, 0.85), rgba(0, 0, 0, 0.95));
+      color: #050509;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.9);
+      font-size: 16px;
+    }
+
+    .intro-title {
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .intro-text {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    /* Sections */
+    .section {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 12px;
+    }
+
+    .section-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 0 0, rgba(245, 193, 92, 0.45), rgba(15, 15, 24, 0.95));
+      border: 1px solid rgba(245, 193, 92, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--bg-main);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.85);
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: var(--accent-silver);
+    }
+
+    .section-body {
+      padding-left: 44px;
+    }
+
+    .section-text {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .items-list {
+      margin-top: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .item-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+    }
+
+    .item-icon {
+      width: 18px;
+      margin-top: 2px;
+      color: var(--accent-gold);
+      flex-shrink: 0;
+      text-shadow: 0 0 12px rgba(245, 193, 92, 0.8);
+    }
+
+    .item-text {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--accent-silver);
+    }
+
+    /* Footer card */
+    .footer-card {
+      padding: 22px 20px 20px;
+      margin-top: 22px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.86)),
+        radial-gradient(circle at 100% 0, rgba(245, 193, 92, 0.18), transparent 55%);
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+    }
+
+    .footer-icon-wrap {
+      margin-bottom: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 18px;
+      background: radial-gradient(circle at 0 0, rgba(245, 193, 92, 0.9), rgba(0, 0, 0, 0.9));
+      color: #050509;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.9);
+      border: 1px solid rgba(245, 193, 92, 0.85);
+    }
+
+    .footer-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--accent-silver);
+    }
+
+    .footer-text {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    /* Contact card */
+    .contact-card {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(10, 10, 18, 0.96);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 0 0, rgba(245, 193, 92, 0.7), rgba(0, 0, 0, 0.95));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #050509;
+      font-size: 14px;
+    }
+
+    .contact-text {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--accent-silver);
+    }
+
+    /* Small helper: subtle app name chip */
+    .app-name-chip {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-silver);
+      border-radius: 999px;
+      padding: 4px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(0, 0, 0, 0.35);
+      margin-left: 6px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 10px 10px 24px;
+      }
+
+      .app-shell {
+        border-radius: 22px;
+      }
+
+      .content-scroll {
+        padding: 16px 16px 20px;
+      }
+
+      .section-body {
+        padding-left: 0;
+        margin-top: 4px;
+      }
+
+      .section-header {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <button class="back-button" onclick="window.history.back();">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+      </div>
+
+      <div class="header-center">
+        <div class="header-title-row">
+          <div class="header-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="header-title">Privacy Policy</div>
+        </div>
+        <div class="header-subtitle">
+          For
+          <span class="app-name-chip">ChatApp</span>
+          <!-- يمكنك تغيير ChatApp إلى اسم تطبيقك -->
+        </div>
+      </div>
+
+      <div class="header-right">
+        <!-- مخصص لأيقونات مستقبلية إن احتجت -->
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content-scroll">
+      <div class="content-inner">
+        <!-- Last Updated Badge -->
+        <div class="last-updated-badge">
+          <i class="fa-regular fa-clock"></i>
+          <span id="lastUpdatedText">Last Updated: </span>
+        </div>
+
+        <!-- Intro Card -->
+        <section class="intro-card">
+          <div class="intro-header">
+            <div class="intro-header-icon">
+              <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <h1 class="intro-title">Welcome to ChatApp</h1>
+          </div>
+          <p class="intro-text">
+            Your privacy is important to us. This policy explains how we handle your data and protect your rights.
+          </p>
+        </section>
+
+        <!-- Sections -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-number">1</div>
+            <h2 class="section-title">1. Introduction</h2>
+          </div>
+          <div class="section-body">
+            <p class="section-text">
+              We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard
+              your personal information when you use ChatApp. By using our service, you agree to the collection and use of
+              information in accordance with this policy.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div class="section-number">2</div>
+            <h2 class="section-title">2. Information We Collect</h2>
+          </div>
+          <div class="section-body">
+            <p class="section-text">
+              We collect the following types of information:
+            </p>
+            <div class="items-list">
+              <div class="item-row">
+                <div class="item-icon">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <p class="item-text">
+                  <strong>Phone Number:</strong> We use your phone number for account registration and identity verification.
+                </p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <p class="item-text">
+                  <strong>Name:</strong> We request your name to display it in chats and your profile.
+                </p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <p class="item-text">
+                  <strong>Contacts:</strong> We access your contacts to sync them with the app and display contact names
+                  instead of phone numbers.
+                </p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <p class="item-text">
+                  <strong>Photos &amp; Media:</strong> We use your camera and photo library to send and receive photos and media in chats.
+                </p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <p class="item-text">
+                  <strong>Microphone:</strong> We use your microphone to send voice messages and make calls.
+                </p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <p class="item-text">
+                  <strong>Chat Data:</strong> We store messages and media sent and received to provide chat services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div class="section-number">3</div>
+            <h2 class="section-title">3. How We Use Your Information</h2>
+          </div>
+          <div class="section-body">
+            <p class="section-text">
+              We use your information for the following purposes:
+            </p>
+            <div class="items-list">
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">To provide chat and calling services.</p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">To improve user experience.</p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">To communicate with you about the app.</p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">To ensure security and prevent fraud.</p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">To comply with legal obligations.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div class="section-number">4</div>
+            <h2 class="section-title">4. Information Sharing</h2>
+          </div>
+          <div class="section-body">
+            <p class="section-text">
+              We do not sell or rent your personal information to third parties. We may share your information only in the
+              following cases:
+            </p>
+            <div class="items-list">
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">
+                  With other users in the app (such as your name and phone number to users in your contacts).
+                </p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">
+                  When legally required or to protect against harm.
+                </p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">
+                  With service providers who help us operate the app (ensuring they comply with privacy standards).
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div class="section-number">5</div>
+            <h2 class="section-title">5. Data Security</h2>
+          </div>
+          <div class="section-body">
+            <p class="section-text">
+              We implement reasonable security measures to protect your information from unauthorized access, alteration,
+              disclosure, or destruction. However, no method of transmission over the internet is 100% secure, and we
+              cannot guarantee absolute security.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div class="section-number">6</div>
+            <h2 class="section-title">6. Your Rights</h2>
+          </div>
+          <div class="section-body">
+            <p class="section-text">
+              You have the right to:
+            </p>
+            <div class="items-list">
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">Access your personal information.</p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">Correct inaccurate information.</p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">Delete your account and information.</p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">Object to processing of your information.</p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">Request data portability.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div class="section-number">7</div>
+            <h2 class="section-title">7. Cookies and Similar Technologies</h2>
+          </div>
+          <div class="section-body">
+            <p class="section-text">
+              We use technologies like cookies and local storage to provide and improve our services. You can control
+              these settings through your device settings.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div class="section-number">8</div>
+            <h2 class="section-title">8. Children's Privacy</h2>
+          </div>
+          <div class="section-body">
+            <p class="section-text">
+              We do not knowingly collect information from children under 13 years of age. If we learn that we have
+              collected information from a child under 13, we will delete that information immediately.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div class="section-number">9</div>
+            <h2 class="section-title">9. Changes to This Privacy Policy</h2>
+          </div>
+          <div class="section-body">
+            <p class="section-text">
+              We may update this Privacy Policy from time to time. We will notify you of any significant changes by
+              posting the new policy in the app and updating the "Last Updated" date at the top of this page.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div class="section-number">10</div>
+            <h2 class="section-title">10. Contact Us</h2>
+          </div>
+          <div class="section-body">
+            <p class="section-text">
+              If you have any questions about this Privacy Policy, please contact us through the app or email.
+            </p>
+          </div>
+        </section>
+
+        <!-- Footer Card -->
+        <section class="footer-card">
+          <div class="footer-icon-wrap">
+            <i class="fa-solid fa-shield-heart"></i>
+          </div>
+          <h3 class="footer-title">Your Privacy Matters</h3>
+          <p class="footer-text">
+            By using ChatApp, you agree to this Privacy Policy. We are committed to protecting your data and being
+            transparent about how we use it.
+          </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-card">
+          <div class="contact-icon">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <p class="contact-text">
+            Questions? Contact us through the app or email.
+          </p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Set "Last Updated" date dynamically (similar to React Native code)
+    (function () {
+      const el = document.getElementById('lastUpdatedText');
+      if (!el) return;
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const formatted = new Date().toLocaleDateString('en-US', options);
+      el.textContent = 'Last Updated: ' + formatted;
+    })();
+  </script>
+</body>
+</html>

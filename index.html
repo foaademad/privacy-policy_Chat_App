@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
-  <title>ChatApp - Privacy Policy</title>
+  <title>LanChat App - Privacy Policy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -371,32 +371,98 @@
 
     /* Contact card */
     .contact-card {
-      margin-top: 18px;
-      padding: 14px 16px;
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(10, 10, 18, 0.96);
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      margin-top: 24px;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.82));
     }
 
-    .contact-icon {
-      width: 30px;
-      height: 30px;
+    .contact-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      gap: 12px;
+    }
+
+    .contact-card .contact-icon {
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: radial-gradient(circle at 0 0, rgba(245, 193, 92, 0.7), rgba(0, 0, 0, 0.95));
       display: flex;
       align-items: center;
       justify-content: center;
       color: #050509;
+      font-size: 16px;
+    }
+
+    .contact-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .contact-description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .email-button {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      background: rgba(31, 31, 45, 0.9);
+      color: var(--accent-gold);
+      text-decoration: none;
+      margin-bottom: 16px;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .email-button:hover {
+      background: rgba(245, 193, 92, 0.12);
+      border-color: rgba(245, 193, 92, 0.5);
+    }
+
+    .email-button > i:first-child {
+      font-size: 20px;
+    }
+
+    .email-text {
+      font-size: 16px;
+      font-weight: 600;
+      margin-left: 12px;
+      flex: 1;
+    }
+
+    .email-button > i:last-child {
       font-size: 14px;
     }
 
-    .contact-text {
+    .contact-info {
+      margin-top: 8px;
+    }
+
+    .contact-info-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .contact-info-row i {
+      color: var(--text-muted);
+      font-size: 16px;
+    }
+
+    .contact-info-text {
       font-size: 13px;
-      line-height: 1.6;
-      color: var(--accent-silver);
+      line-height: 1.5;
+      color: var(--text-muted);
     }
 
     /* Small helper: subtle app name chip */
@@ -455,8 +521,7 @@
         </div>
         <div class="header-subtitle">
           For
-          <span class="app-name-chip">ChatApp</span>
-          <!-- يمكنك تغيير ChatApp إلى اسم تطبيقك -->
+          <span class="app-name-chip">LanChat App</span>
         </div>
       </div>
 
@@ -480,7 +545,7 @@
             <div class="intro-header-icon">
               <i class="fa-solid fa-circle-info"></i>
             </div>
-            <h1 class="intro-title">Welcome to ChatApp</h1>
+            <h1 class="intro-title">Welcome to LanChat App</h1>
           </div>
           <p class="intro-text">
             Your privacy is important to us. This policy explains how we handle your data and protect your rights.
@@ -496,7 +561,7 @@
           <div class="section-body">
             <p class="section-text">
               We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard
-              your personal information when you use ChatApp. By using our service, you agree to the collection and use of
+              your personal information when you use LanChat App. By using our service, you agree to the collection and use of
               information in accordance with this policy.
             </p>
           </div>
@@ -726,8 +791,18 @@
           </div>
           <div class="section-body">
             <p class="section-text">
-              If you have any questions about this Privacy Policy, please contact us through the app or email.
+              If you have any questions about this Privacy Policy or encounter any issues, please contact us:
             </p>
+            <div class="items-list">
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">Email: support@lanchat.app</p>
+              </div>
+              <div class="item-row">
+                <div class="item-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <p class="item-text">We will respond to your inquiries as soon as possible</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -738,19 +813,33 @@
           </div>
           <h3 class="footer-title">Your Privacy Matters</h3>
           <p class="footer-text">
-            By using ChatApp, you agree to this Privacy Policy. We are committed to protecting your data and being
+            By using LanChat App, you agree to this Privacy Policy. We are committed to protecting your data and being
             transparent about how we use it.
           </p>
         </section>
 
         <!-- Contact Section -->
         <section class="contact-card">
-          <div class="contact-icon">
-            <i class="fa-regular fa-envelope"></i>
+          <div class="contact-header">
+            <div class="contact-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <h3 class="contact-title">Need Help?</h3>
           </div>
-          <p class="contact-text">
-            Questions? Contact us through the app or email.
+          <p class="contact-description">
+            If you have any questions, concerns, or encounter any issues, please don't hesitate to contact our support team.
           </p>
+          <a href="mailto:support@lanchat.app?subject=Support Request - LanChat App" class="email-button">
+            <i class="fa-regular fa-envelope"></i>
+            <span class="email-text">support@lanchat.app</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+          <div class="contact-info">
+            <div class="contact-info-row">
+              <i class="fa-regular fa-clock"></i>
+              <span class="contact-info-text">Response time: Usually within 24-48 hours</span>
+            </div>
+          </div>
         </section>
       </div>
     </main>
